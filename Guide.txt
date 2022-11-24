@@ -1,0 +1,19 @@
+- create backend folder
+- npm init -y
+- npm install express
+- code server.js with express
+- install nodemon (npm install nodemon).
+- setting package.js
+- npm run dev for run the nodemon
+- npm install dotenv
+- create .env to create and save PORT Or anything
+- API Enpoint
+                API Endpoint
+                GET             /workouts       -->  Gets all the workout document
+                POST            /workouts       -->  creates a new workout document
+                GET             /workouts/:id   -->  Get a single workout document
+                DELETE          /workouts/:id   -->  Deletes a single workout
+                PATCH           /workouts/:id   -->  Updates a single workout 
+- Create Express Router and API Routes
+- MONGODB ATLAS AND mongoose
+- connect to mongodb
