@@ -1,0 +1,23 @@
+- Step By Step Server with nodejs express mongoose
+1. Npm init fungsinya untum membaut package.json dan supaya bisa menyimpan dependencies atau supaya bisa menyimpan module yan di download.
+2. Buat Server.js 
+    - Didalmnya Untuk membuat server dan connect to mongDb server
+    - Import express.js nya Dan initialisasi 
+      cosnt app = express();
+    - gunakan app untuk membuat router dengnamenggunakan app.use()
+    - Lalu initial mongodb connect untuk koneksi ke database mongoDb
+3 Buat 
+    1. Folder Controller
+    2. Folder model
+    3. Folder Routes
+- Folder Model Di gunakan untuk membuat schema collection dari rancangan ERD(Entity elational Diagram) yang sudah dibuat sebaga acuan input yang harus dimasukkan ke dalam database.
+- Folder Controller Digunakan Untuk membuat fungsi controller, Misalnya untuk Find Atu Findbyid dll yang akan di lempar ke client ketika lient merequest.
+- Folder Routes digunakan untuk menentukan nama alamat ketika ingin merequest data tertentu misalnya http://localhost/categories atau bisa juga menggukana tambahan id misalnya ingin merequest berdasarkan id teretentu seperti findOneById
+
+- PACKAGE YANG HARUS DI INSTALL KETIKA INGIN MEMBUAT SERVER MENGGUNAKAN NODEJS
+    - npm install express
+    - npm install mongoDb
+    - npm install nodemon
+    - npm install dotenv
+    - npm install cors
+

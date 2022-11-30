@@ -5,24 +5,25 @@ const workoutsRoutes = require('./routes/workouts');
 const mongoose = require("mongoose");
 const cors = require('cors');
 
-// 5. connect mongoDb
-mongoose.connect(process.env.MONGODB_URL)
-    .then(() => {
-        console.log('App Connection');
-        // Listen For request
-        app.listen(process.env.PORT, () => {
-            console.log('Connected to db & listening on port', process.env.PORT)
-        })
-    })
-    .catch((err) => {
-        console.log(err);
-    });
-
 // 1. Express app
-
 const app = express();
+// Suoaya bisa meneriam data json dari client
+const DB = process.env.MONGODB_URL.toString();
+
+mongoose
+    .connect(DB)
+    .then(() => {
+        app.listen(process.env.PORT, () => {
+            console.log('Connected to db & listening on port', process.env.PORT);
+        });
+    })
+    .catch((error) => {
+        console.log(error);
+    })
 
 app.use(express.json());
+// Tidak error dari cors-policiy nya
 app.use(cors());
+
 // 3. routes
 app.use('/api/workouts', workoutsRoutes);
